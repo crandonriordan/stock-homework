@@ -1,0 +1,85 @@
+html { 
+    font-size: 1vw; 
+}
+
+body {
+    -webkit-box-sizing: border-box; /* For legacy WebKit based browsers */
+     -moz-box-sizing: border-box; /* For legacy (Firefox <29) Gecko based browsers */
+          box-sizing: border-box;
+}
+
+body {
+    background-color: #193441;
+    font-size: 2em;
+    text-align: center;
+}
+
+table {
+    word-wrap: break-word;
+    width: 75%;
+    margin: 0 auto;
+    border: 1px solid black;
+    border-collapse: collapse;
+    background-color: #D1DBBD;
+    box-shadow: 0px 2px 2px 3px rgba(0,0,0,0.2) ;
+}
+
+th {
+    border-bottom: 1px solid black;
+    background-color: #3E606F;
+}
+
+th,td {
+    padding: 0.75em;
+}
+
+td {
+    border-bottom: 1px solid rgba(4,99,128, 0.3);
+}
+
+tr td:nth-child(4n) {
+    text-align: center;
+}
+
+tr:nth-child(even) {
+    background-color: #91AA9D;
+}
+
+tbody tr:hover {
+    color: red;
+}
+
+div {
+    width: 75%;
+    display: inline-block;
+    background-color: #FCFFF5;
+    padding: 1em;
+    border-radius: 5px;
+    box-shadow: 1px 1px 3px 3px rgba(0,0,0,0.4);
+    margin: 0 auto;
+    text-align: center;
+}
+
+h1 {
+    font-size: 1em;
+    text-align: center;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+button {
+    margin: 10px auto;
+    width: auto;
+    height: 48px;
+}
+
+.remove {
+    color: red;
+}
+
+.remove--btn {
+    background-color: red;
+}

@@ -1,0 +1,41 @@
+<% include ./partials/header %>
+<div>
+    <table>
+        <thead>
+            <th>Stock</th>
+            <th>Open</th>
+            <th>Close</th>
+            <th>Percentage Change</th>
+            <th class="remove remove--head">Remove</th>
+            <th class="update">Update</th>
+        </thead>
+        
+        <tbody>
+            <% stocks.forEach(function(stock) { %>
+                <tr>
+                    <td><%= stock.name %></td>
+                    <td><%= parseFloat(stock.open).toFixed(2) %></td>
+                    <td><%= parseFloat(stock.close).toFixed(2)%></td>
+                    <td><%= (((parseFloat(stock.close) - parseFloat(stock.open)) / parseFloat(stock.open)) * 100).toFixed(2) + "%" %></td>
+                    <!-- DELETE stock --> 
+                    <td >
+                        <form action="/stocks/<%=stock._id%>?_method=DELETE" method="POST" id="delete">
+                          <button class="remove--btn"><i class="fa fa-trash" aria-hidden="true"></i></button>
+                        </form>
+                    </td>
+                    <td>
+                        <form action="/stocks/<%=stock._id%>?_method=PUT" method="POST">
+                            <button class="update update--btn"><i class="fa fa-refresh" aria-hidden="true"></i></button>
+                        </form>
+                    </td>
+                </tr>
+                
+                
+            <% }); %>
+    
+        </tbody>
+    </table>
+    <button><a href="/stocks/new">Enter New Stock</a></a></button>
+</div>
+
+<% include ./partials/footer %>

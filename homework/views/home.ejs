@@ -1,0 +1,43 @@
+<% include partials/header %>
+        
+  
+
+<%= data %>
+
+<!--<table>-->
+<!--    <thead>-->
+<!--        <tr>-->
+<!--            <th>Stock Name</th>-->
+<!--            <th>Open Value</th>-->
+<!--            <th>Closing Value</th>-->
+<!--            <th>Change over Week</th>-->
+<!--        </tr>-->
+<!--    </thead>-->
+<!--    <tbody>-->
+    <!-- iterate and create for every stock -->
+<!--    <% data.forEach(function(stock) { %>-->
+<!--        <% if(typeof data[stock] == "undefined") { %>-->
+<!--            <% return; %>-->
+<!--        <% } %>-->
+<!--        <% let name = stock; %>-->
+<!--        <% let openVal = data[name].open; %>-->
+<!--        <% let closeVal = data[name].close; %>-->
+<!--        <% let changeOverWeek = data[name].changeOverWeek.toString() + "%"; %>-->
+<!--        <tr>-->
+<!--            <td> <%= name %> </td>-->
+<!--            <td> <%= openVal %> </td>-->
+<!--            <td> <%= closeVal %> </td>-->
+<!--            <td> <%= changeOverWeek %> </td>-->
+<!--        </tr>-->
+<!--    <% }) %>-->
+<!--    </tbody>-->
+<!--</table>-->
+
+<form action="/" method="POST">
+    <input type="text" placeholder="Stock name" name="stock">
+    <input type="submit">
+</form>
+
+
+
+<% include partials/footer %>
